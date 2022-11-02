@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="../style/happytrip-styles.css" />
+    <script type="module" src="../Models/master.js"></script>
+    <script type="module" src="../booking/bookingConfirmation.js"></script>
+    <title>Search Flights</title>
+  </head>
+  <body>
+    <!-- Nav Bar -->
+   
+      <nav class="navbar navbar-light bg-light col-12">
+        <div class="container-fluid">
+          <a class="navbar-brand col-2" href="#" >
+            <img
+              src="https://www.travelbizmonitor.com/wp-content/uploads/2022/09/Cleartrip-New-Logo.png"
+              alt=""
+              height="24"
+              class="d-inline-block align-text-top"
+            />
+          </a>
+          <div class="subsection-nav">
+            <a class="navbar-brand nav-element" href="#">
+              INR<i class="bi bi-currency-rupee"></i>
+            </a>
+            <a class="navbar-brand nav-element" href="#">
+              <i class="bi bi-headset"></i>&nbsp; Support
+            </a>
+            <a class="navbar-brand nav-element" href="#">
+              <i class="bi bi-person-circle"></i>&nbsp; Log in
+            </a>
+          </div>
+        </div>
+      </nav>
+ 
+   
+
+
+    
+    <div class="container" style="font-size:12px">
+      <div class="row align-items-start">
+        <div class="col-3 side">
+          <!-- Sidebar -->
+
+          <div
+            id="sidebarMenu"
+            class="collapse d-lg-block sidebar collapse bg-white"
+          >
+            <div class="position-sticky">
+              <div class="list-group list-group-flush mx-3 mt-4">
+                <a
+                  href="../booking/booking.html"
+                  class="list-group-item list-group-item-action py-2 ripple active"
+                  aria-current="true"
+                >
+                  <i class="bi bi-airplane "></i>&nbsp;<span>Flights</span
+                  ><i class="bi bi-chevron-right" style="float: right"></i>
+                </a>
+                <a
+                  href="#"
+                  class="list-group-item list-group-item-action py-2 ripple"
+                >
+                  <i class="bi bi-house"></i>&nbsp;<span>Hotels</span
+                  ><i class="bi bi-chevron-right" style="float: right"></i>
+                </a>
+                <a
+                  href="#"
+                  class="list-group-item list-group-item-action py-2 ripple"
+                  ><i class="bi bi-star-fill"></i>&nbsp;<span
+                    >Cleartrip for Work</span
+                  ></a
+                >
+                <a
+                  href="#"
+                  class="list-group-item list-group-item-action py-2 ripple"
+                  ><i class="bi bi-percent"></i>&nbsp;<span>Top Offers</span></a
+                >
+                <a
+                  href="#"
+                  class="list-group-item list-group-item-action py-2 ripple"
+                >
+                  <i class="bi bi-gift-fill"></i>&nbsp;<span>Gift Cards</span>
+                </a>
+                <a
+                  href="#"
+                  class="list-group-item list-group-item-action py-2 ripple"
+                  ><i class="bi bi-headset"></i>&nbsp;<span>Support</span></a
+                >
+                <a
+                  href="#"
+                  class="list-group-item list-group-item-action py-2 ripple"
+                  ><i class="bi bi-briefcase-fill"></i>&nbsp;<span
+                    >Manage Trips</span
+                  ></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div style="padding:10px;margin-left:50px;border:solid 3px grey;box-shadow: 10px 10px 5px lightgray;" class="col-md-8 ">
+          <h4>Thanks for booking with Cleartrip</h4>
+          <p>We have confirmed your booking and emailed you all the details.Your Trip ID 
+            is <span id="tripId"><b>12345</b></span>. Please use this in any communication with Cleartrip. 
+          </p>
+          <p style=" border-top:2px solid skyblue;border-bottom:2px solid skyblue;background-color:lightblue"><b>Note:&nbsp;</b><u><a href="#"style="color:blue"onclick="printpage()" >Print</a></u> the e-ticket and carry it along with the ID proof mentioned in the ticket when you board the flight.</p>
+          <script>
+            function printpage()
+            {
+            
+              window.print();
+            }
+          </script>
+          <div class="container">
+       
+                        
+            <table class="table">
+              <thead>
+                <tr>
+                  <th colspan="6" id="title"> Mumbai to Delhi</th> 
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td >Transaction ID</td>
+                  <td id="Transaction_id">1239081230</td>
+                  <td>From</td>
+                  <td id="From"></td>
+                  <td>Airline</td>
+                  <td id="Airline"></td>
+              
+                </tr>
+                <tr>
+                  <td>Flight No </td>
+                  <td id="FlightNo">123654</td>
+                  <td>To</td>
+                  <td id="To"></td>
+                  <td>Date of journey</td>
+                  <td id="Date"></td>
+                </tr>
+                <tr>
+                  <td>Schedule Departure</td>
+                  <td id="Schedule"></td>
+                  <td>Boarding Point</td>
+                  <td id="BoardingPoint"></td>
+                  <td>Date of boarding</td>
+                  <td id="DateofBoarding"></td>
+                </tr>
+                <tr >
+                  <td>Duration:</td>
+                  <td id="Duration" colspan="5"></td>
+                </tr>
+              </tbody>
+            </table>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th colspan="6">Passenger details</th> 
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>S.No.</th>
+                  <th>Name</th>
+                  <th>Age</th>
+                  <th>Gender</th>
+                  <th>Seat No</th>
+                  <th>Status</th>
+              
+                </tr>
+                <tr>
+                  <td id="s_no"></td>
+                  <td id="name"></td>
+                  <td id="age"></td>
+                  <td id="gender"></td>
+                  <td id="seat_no"></td>
+                  <td id="status"></td>
+              
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Bindu Swaminathan</td>
+                  <td>25</td>
+                  <td>Female</td>
+                  <td>6B</td>
+                  <td>Confirmed</td>
+              
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Ganesh Swaminathan</td>
+                  <td>9</td>
+                  <td>Male</td>
+                  <td>6C</td>
+                  <td>Confirmed</td>
+              
+                </tr>
+              </tbody>
+              </table>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th colspan="6">General Information</th> 
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th rowspan="4">Price details</th>
+                    <td>Fare</td>
+                    <th id="Fare">₹ </th>
+                  </tr>
+                  <tr>
+                    <td>Airline service fee</td>
+                    <th id="AirlineFee">₹ </th>
+                    
+                  </tr>
+                  <tr>
+                    <td>Cleartrip service fee</td>
+                    <th id="Cleartrip_fee">₹ </th>
+                    
+                  </tr>
+                  <tr >
+                    <td>Total you paid</td>
+                    <th id="Total">₹ </th>
+                  </tr>
+
+                  <tr>
+                    <th rowspan="5">Contact details for this trip</th>
+                    <td>Name</td>
+                    <th>Mr. John Doe</th>
+                  </tr>
+                  <tr>
+                    <td>Address</td>
+                    <th>Opera house, Mumbai</th>
+                    
+                  </tr>
+                  <tr>
+                    <td>Email</td>
+                    <th>john@gmail.com</th>
+                    
+                  </tr>
+                  <tr >
+                    <td>Tel</td>
+                    <th>04994223797</th>
+                  </tr>
+                  <tr >
+                    <td>Mobile</td>
+                    <th>9673627171</th>
+                  </tr>
+
+                </tbody>
+                
+              </table>
+          
+          </div>
+        </div>
+        
+        
+      </div>
+    </div>
+    <a href="../search/search.html"><button class="btn-primary" style="padding: 10px 60px; font-size: 18px; margin-left: 55%; margin-top: 2%;">Home</button></a>
+  </body>
+</html>
