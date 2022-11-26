@@ -1,0 +1,145 @@
+*{
+    height: 0;
+
+    width: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    background: rgb(99, 17, 17);
+    height: 50rem;
+    width: 80rem;
+    /* margin: auto; */
+    display: flex;
+    outline: dashed 1.5px black;
+    padding: 2rem;
+    /* margin: auto; */
+    margin-right: 18rem;
+    /* margin-top: 18rem; */
+    /* margin-bottom: 18rem; */
+    margin-left: 18rem;
+    /* font-size: ; */
+}
+
+.card1{
+    height: 5rem;
+    width: 20rem;
+    background: #aaa;
+    text-align: center;
+   
+}
+
+h4{
+    text-align: center;
+    margin-left: 5.5rem;
+    margin-top: 1rem;
+    /* margin-bottom: 2rem; */
+    /* padding: 2rem; */
+    color: rgb(3, 3, 11);
+}
+
+.card2{
+    height: 5rem;
+    width: 20rem;
+    background: rgb(178, 46, 167);
+    text-align: center;
+    /* padding: 10rem; */
+    /* margin: 20px; */
+
+    /* display: flex; */
+    /* margin: 10rem; */
+    /* margin-top: 20px; */
+}
+
+.card3{
+    height: 5rem;
+    width: 20rem;
+    background: rgba(219, 137, 37, 0.569);
+    text-align: center;
+   
+  
+}
+
+.card4 {
+    height: 5rem;
+    width: 20rem;
+    /* background: rgb(10, 52, 177); */
+    background-color: rgb(22, 176, 47);
+    color: azure;
+    /* font-size: 2rem; */
+    text-align: center;
+    /* display: flex; */
+
+    
+  
+}
+
+
+
+img{
+    height: 3rem;
+    width: 3rem;
+    border-radius: 1.5rem;
+    display: center;
+
+
+}
+
+.subcard1{
+    height: 15rem;
+    width: 20rem;
+    background: white;
+    margin-top: -1rem;
+    padding: 1rem;
+
+
+}
+.subcard2{
+    height: 15rem;
+    width: 20rem;
+    background: white;
+    margin-top: -1rem;
+    padding: 1rem;
+
+}
+.subcard3{
+    height: 15rem;
+    width: 20rem;
+    background: white;
+    margin-top: -1rem;
+    padding: 1rem;
+
+}
+
+.subcard4{
+    height: 15rem;
+    width: 16rem;
+    background: white;
+    margin-top: -1rem;
+    padding: 1rem;
+
+}
+
+ p, h1{
+    /* text-align: center; */
+    color: aqua;
+    /* display: flex; */
+}
+
+a{
+    /* margin-top: -10rem; */
+    color: #000;
+    text-decoration: none;
+    font-size: large;
+    /* font-weight: 1rem; */
+    /* text-underline-offset: unset; */
+    /* padding: 20rem; */
+    /* margin-left:-10rem; */
+}
+
+i{
+    /* float: left; */
+    color: #000;
+    /* margin-top: 1rem; */
+}
+
